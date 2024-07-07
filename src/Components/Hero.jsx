@@ -71,7 +71,7 @@ const OverLay = ({heading,subheading})=>{
     return (
         <motion.div style={{y,opacity}} ref={targetRef} className='absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white -5'>
             <p className='mb-2 text-center text-xl md:mb-4 md:text-3xl text-white/60'>{subheading}</p>
-            <p className='pb-3 text-center text-4xl font-bold md:text-7xl bg-gradient-to-r from-[#8C03FC]/100 via-[#8C03FC]/60 to-[#8C03FC]/90 text-transparent bg-clip-text border-white'>
+            <p className='pb-3 text-center text-4xl font-bold md:text-7xl '>
             <Typewriter
               options={{
                 strings: ['Converts.', 'Sign ups.'],
