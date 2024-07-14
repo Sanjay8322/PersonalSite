@@ -1,30 +1,25 @@
 import React, { useRef } from 'react'
-import jaynew from '../assets/jaynew.jpg'
 import { useScroll, useTransform } from 'framer-motion'
 import { motion } from 'framer-motion'
-import Typewriter from 'typewriter-effect';
-import { DragCloseDrawerExample } from './DragCloseDrawer';
 import { projects } from "../Data/Data"
 
 const Works = () => {
   return (
-    <div className=''>
-        <TextContent img={jaynew} heading="Convert." subheading="I develop website for your Business that get" >
-          <ExampleContent/>
-          {/* <DragCloseDrawerExample /> */}
-        </TextContent>
+    <div className='' name="projects">
+        <Content >
+          <TextContent/>
+        </Content>
     </div>
   )
 }
 
 const PADDING=12
-const TextContent =({img, heading, subheading, children})=>{
+const Content =({children})=>{
     return (
         <div style={{paddingLeft:PADDING, paddingRight:PADDING}}>
             <div className='relative h-[150vh]'>
                 <StickyImage/>
                 <Project projectList={projects} />
-                   
             </div>
             {children}
         </div>
@@ -82,7 +77,7 @@ const Project = ({ projectList }) => {
     );
 };
 
-const ExampleContent = () => {
+const TextContent = () => {
     return (
     <div className="px-4 pb-24 pt-12 flex flex-col justify-center items-center">
       
@@ -92,7 +87,6 @@ const ExampleContent = () => {
             <span className='text-[#8C03FC] font-bold tracking-wide'> building your brand or business</span>. It's essential to have your visitors sign up. I can help you build a site. Above are some of the projects I have developed using React and TailwindCSS.        </p>
      
       </div>
-      {/* <DragCloseDrawerExample/> */}
     </div>
     )
   };

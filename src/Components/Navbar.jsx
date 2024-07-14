@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 export const Navbar = () => {
   return (
-    <div className="bg-neutral-100 sticky z-50 top-0">
+    <div className="sticky z-50 top-0 left-0">
       <SlideTabs />
     </div>
   );
@@ -24,13 +24,13 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1"
+      className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1  text-white"
     >
-      <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>Pricing</Tab>
-      <Tab setPosition={setPosition}>Features</Tab>
-      <Tab setPosition={setPosition}>Docs</Tab>
-      <Tab setPosition={setPosition}>Blog</Tab>
+      <Link to="home" smooth={true} offset={-50}><Tab setPosition={setPosition}>Home</Tab></Link>
+      <Link to="about" smooth={true} offset={-100}><Tab setPosition={setPosition}>About</Tab></Link>
+      <Link to="projects" smooth={true} offset={200}><Tab setPosition={setPosition}>Projects</Tab></Link>
+      <Tab setPosition={setPosition}>Blogs</Tab>
+      <Link to="contact" smooth={true}><Tab setPosition={setPosition}>Contact</Tab></Link>
 
       <Cursor position={position} />
     </ul>

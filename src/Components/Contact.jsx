@@ -12,7 +12,7 @@ const Contact = () => {
 
     
   return (
-    <div className=''>
+    <div className='' name="contact">
         <TextContent />
     </div>
   )

@@ -5,13 +5,11 @@ import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect';
 import { DragCloseDrawerExample } from './DragCloseDrawer';
 
-
 const Hero = () => {
   return (
-    <div className=''>
+    <div className='' name="home">
         <TextContent img={jaynew} heading="Convert." subheading="I develop website for your Business that get" >
           <ExampleContent/>
-          {/* <DragCloseDrawerExample /> */}
         </TextContent>
     </div>
   )
@@ -88,7 +86,7 @@ const OverLay = ({heading,subheading})=>{
 
 const ExampleContent = () => {
     return (
-    <div className="px-4 pb-24 pt-12 flex flex-col justify-center items-center">
+    <div className="px-4 pb-24 pt-12 flex flex-col justify-center items-center" name="about">
       
       <h2 className="text-3xl font-bold tracking-wide">
         About me
